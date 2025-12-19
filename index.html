@@ -115,7 +115,7 @@
         <h2 class="title is-3">About this tutorial</h2>
         <div class="content has-text-justified">
           <p>
-            Large Language Models (LLMs) have made significant strides in generating human-like text, but their tendency to hallucinate—producing factually incorrect or fabricated information—remains a pressing issue. This tutorial provides a comprehensive exploration of hallucinations in LLMs, introducing participants to the key concepts and challenges in this domain. We will cover the types of hallucination, including Factual Mirage and Silver Lining, and present the latest approaches for benchmarking, detection, and mitigation. The motivation for understanding hallucination is particularly critical from a multimodal standpoint, as Vision-Language Models (VLMs) can exacerbate the problem by blending hallucinated text with misleading images or video. The tutorial will offer practical techniques to reduce hallucinations using both black-box and gray-box methods. Designed for researchers and professionals in generative AI, this tutorial bridges the gap between emerging research and practical solutions, providing attendees with valuable insights and tools to enhance the factual accuracy of LLM outputs. Participants will gain a deeper understanding of the complexities surrounding LLM hallucination and be equipped with strategies to drive future innovations in the field.
+            As Large Language Models (LLMs) become more widely used for tasks like document summarization, question answering, and information extraction, improving their trustworthiness and interpretability has become increasingly important. One key strategy for achieving this is attribution, a process that tracks the sources of the generated responses. This tutorial will explore various attribution techniques, including model-driven attribution, post-retrieval answering, and post-generation attribution. We will also discuss the challenges involved in implementing these approaches, and also look at the advanced topics such as model-based attribution for complex cases, table attribution, multimodal attribution, and multilingual attribution.
           </p>  
         </div>
       </div>
@@ -160,19 +160,24 @@
           </thead>
           <tbody>
             <tr>
-              <td class="tg-0lax">08:30—08:45</td>
-              <td class="tg-0lax">Section 1: Introduction to hallucination in LLMs  </td> <!-- <a href="./slides/1-intro.pdf" target='_blank'>[Slides]</a> --> 
-              <td class="tg-0lax">Amitava</td>
+              <td class="tg-0lax">09:00—09:30</td>
+              <td class="tg-0lax">Section 1: Introduction to attribution in LLMs  </td> <!-- <a href="./slides/1-intro.pdf" target='_blank'>[Slides]</a> --> 
+              <td class="tg-0lax">Vipula</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">09:30—09:45</td>
+              <td class="tg-0lax">Section 2: Chart/Visual attribution  </td> <!-- <a href="./slides/1-intro.pdf" target='_blank'>[Slides]</a> --> 
+              <td class="tg-0lax">Koustava</td>
             </tr>
             <tr>
               <td class="tg-0lax">08:45—09:45</td>
-              <td class="tg-0lax">Section 2: Hallucination Detection/Mitigationn  </td> <!-- <a href="./slides/1-intro.pdf" target='_blank'>[Slides]</a> --> 
-              <td class="tg-0lax">Aman/Vipula</td>
+              <td class="tg-0lax">Section 3: Tabular attribution  </td> <!-- <a href="./slides/1-intro.pdf" target='_blank'>[Slides]</a> --> 
+              <td class="tg-0lax">Puneet</td>
             </tr>
             <tr>
               <td class="tg-0lax">09:45—10:00</td>
-              <td class="tg-0lax">Section 3: Open Challenges </td> <!-- <a href="./slides/1-intro.pdf" target='_blank'>[Slides]</a> --> 
-              <td class="tg-0lax">Amitava</td>
+              <td class="tg-0lax">Section 4: Open Challenges </td> <!-- <a href="./slides/1-intro.pdf" target='_blank'>[Slides]</a> --> 
+              <td class="tg-0lax">Nedim</td>
             </tr>
             <tr>
               <td class="tg-0lax">10:00—10:15</td>
@@ -193,24 +198,9 @@
         <br />
 
         <ul>
-          <li><a href="https://arxiv.org/pdf/2309.05922"><b>A Survey of Hallucination in Large Foundation Models</b></a> (Rawte et al., 2023)</li>
-          <li><a href="https://arxiv.org/pdf/2309.01219"><b>Siren’s Song in the AI Ocean:
-A Survey on Hallucination in Large Language Models</b></a> (Shi et al., 2023)</li>
-          <li><a href="https://arxiv.org/pdf/2309.06794"><b>Cognitive Mirage: A Review of Hallucinations in Large Language Models</b></a> (Ye et al., 2023)</li>
-          <li><a href="https://aclanthology.org/2022.acl-long.236.pdf"><b>Hallucinated but Factual! Inspecting the Factuality of Hallucinations in
-Abstractive Summarization</b></a> (Cao et al., 2023)</li>
-          <li><a href="https://aclanthology.org/2023.emnlp-main.155.pdf"><b>The Troubling Emergence of Hallucination in Large Language Models - An Extensive Definition, Quantification, and Prescriptive Remediations</b></a> (Rawte et al., 2023)</li>
-          <li><a href="https://arxiv.org/pdf/2309.11495"><b>CHAIN-OF-VERIFICATION REDUCES HALLUCINATION
-IN LARGE LANGUAGE MODELS</b></a> (Dhuliawala et al., 2023)</li>
-          <li><a href="https://arxiv.org/pdf/2308.11764v2"><b>Halo: Estimation and reduction of hallucinations in open-source weak large language models</b></a> (Elaraby et al., 2023)</li>
-          <li><a href="https://aclanthology.org/2023.eacl-main.234.pdf"><b>When Do Pre-Training Biases Propagate to Downstream Tasks?
-A Case Study in Text Summarization</b></a> (Ladhak et al., 2023)</li>
-          <li><a href="https://arxiv.org/pdf/2305.11747"><b>HaluEval: A Large-Scale Hallucination Evaluation Benchmark
-for Large Language Models</b></a> (Li et al., 2023)</li>
-          <li><a href="https://arxiv.org/pdf/2307.03987"><b>A Stitch in Time Saves Nine: Detecting and Mitigating Hallucinations of LLMs by Validating Low-Confidence Generation</b></a> (Varshney et al., 2023)</li>
-          <li><a href="https://arxiv.org/pdf/2305.13534"><b>How Language Model Hallucinations Can Snowball</b></a> (Zhang et al., 2023)</li>
-          <li><a href="hhttps://arxiv.org/pdf/2303.08896"><b>SELFCHECKGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models</b></a> (Manakaul et al., 2023)</li>
-          <li><a href="https://arxiv.org/pdf/2305.15852"><b>SELF-CONTRADICTORY HALLUCINATIONS OF LLMS: EVALUATION, DETECTION AND MITIGATION</b></a> (Mündler et al., 2023)</li>
+          <li><a href="https://arxiv.org/pdf/2311.03731"><b>A Survey of Large Language Models Attribution</b></a> (Li et al., 2024)</li>
+          <li><a href="https://openreview.net/pdf?id=qUVP6IDc5J"><b>Eliciting Attributions from LLMs with Minimal Supervision</b></a> (Pasunuru et al., 2023)</li>
+   
           </ul>
         
         <br />
